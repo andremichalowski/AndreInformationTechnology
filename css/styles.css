@@ -1,0 +1,102 @@
+body {
+  font-family: "Bebas Neue", cursive;
+  background-color: #42414c;
+  padding: 20%;
+}
+
+header {
+  margin-bottom: 100px;
+}
+
+.bodyContainer {
+  padding-left: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bebas Neue", cursive;
+}
+
+.bannerText {
+  font-size: 80px;
+}
+
+h2 {
+  color: hsl(86, 88%, 80%);
+  padding: 4px;
+}
+
+.titleBorder {
+  border: 2px hsl(86, 88%, 80%) solid;
+}
+
+header h2 {
+  color: #d4ffc8;
+}
+
+h3 {
+  color: hsl(309, 79%, 83%);
+}
+
+h5 {
+  color: black;
+  font-size: 20px;
+}
+
+p {
+  color: hsl(60, 0%, 55%);
+}
+
+.ps {
+  font-size: 10px;
+  color: rgb(118, 116, 116);
+}
+
+.i {
+  padding-left: 20px;
+}
+
+.bb {
+  border: 1px black dotted;
+  background-color: rgba(255, 192, 203, 0.702);
+}
+
+a {
+  color: gainsboro;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(255, 170, 0);
+  text-decoration: none;
+}
+
+footer {
+  /* background-image: linear-gradient(#CEC8FF, rgb(225, 178, 246));
+    padding: 20px 0; */
+}
+
+.jumbotron {
+  padding: 30px;
+  background-image: linear-gradient(to right, #5637dd, #3046c5, #60106b);
+  color: white;
+}
+
+.bottom-border {
+  border-bottom: 2px groove;
+}
+
+.row-content {
+  padding: 50px 0;
+  /* border-bottom: 1px ridge; */
+  min-height: 200px;
+}
+
+.col-outline {
+  border: 3px solid black;
+}
+
+.cstm-css {
+  background-color: teal;
+}

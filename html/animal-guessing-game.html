@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Building Guessing Game</title>
+</head>
+<body>
+    <h1 class="title">Animal Guessing Game</h1>
+    <!-- 1. button to run a function -->
+    <button type="button" onclick="runGame()">Start Game</button>
+    <script>
+        const ANIMALS_ARRAY = ['Mouse', 'Cat', 'Dog', 'Lion', 'Rhino', 'Giraffe'];
+
+        function runGame() {
+            let guess = '';
+            let correct = false;
+            let numTries = 0;
+
+
+            const targetIndex = Math.floor(Math.random() * ANIMALS_ARRAY.length);
+            const target = ANIMALS_ARRAY[targetIndex];
+
+            console.log('The target is: ' + target); 
+            console.log('test for correct outside do', correct);
+            console.log('test for !correct outside do', !correct);
+            do {
+                guess = prompt('I am thinking of one of these animals:\n\n' +
+                    ANIMALS_ARRAY + '\n\nWhat animal am I thinking of?\n');
+                    console.log(prompt);
+                    numTries += 1;
+
+                if (guess === null) {
+                    alert('The game has been aborted.');
+                    return;
+                }
+                correct = checkGuess(guess, target);
+                console.log('test for correct', correct);
+                console.log('test for !correct', !correct);
+            } while (!correct); // Keep looping until the function checkGuess returns a value of 'true'
+
+            alert('Congratulations! You have guessed the animal!\n\n' +
+            'It took you ' + numTries + ' guesses to finish the game!\n\n');
+            
+            document.body.style.backgroundImage = `url('../img/${target}.png')`;
+   
+        }
+
+        function checkGuess(guess, target) {
+            const sorryMsg = 'Sorry, your guess is incorrect.\n\n';
+            const tryMsg = '\n\nPlease try again.';
+            let correct = false;
+            if (!ANIMALS_ARRAY.includes(guess)) {
+                alert('Sorry, I don\'t recognize your animal. ' + tryMsg);
+            } else if ( guess < target ) {
+                alert(sorryMsg + 'Hint: your animal is smaller than mine.' + tryMsg);
+                console.log(correct);
+            } else if ( guess > target ) {
+                alert(sorryMsg + 'Hint: your animal is bigger than mine.' + tryMsg);
+                console.log(correct);
+            } else {
+                console.log('you got it right');
+                correct = true;
+            }
+            return correct;
+        }
+    </script>
+</body>
+</html>

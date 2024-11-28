@@ -1,0 +1,43 @@
+{
+    "name": "nuCamp_student_excercises",
+    "version": "1.0.0",
+    "description": "Student excercises for nuCamp",
+    "main": "index.html",
+    "scripts": {
+        "lite": "lite-server",
+        "start": "npm run watch:all",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch:all": "npm run lite",
+        "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+        "imagemin": "imagemin img/* -o dist/img",
+        "clean": "rimraf dist",
+        "usemin": "usemin bootstrap.html -d dist --htmlmin -o dist/bootstrap.html && usemin react.html -d dist --htmlmin -o dist/react.html && usemin test.html -d dist --htmlmin -o dist/test.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+        "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/andremichalowski/nuCamp_student_excercises.git"
+    },
+    "keywords": [],
+    "author": "Andre Michalowski",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/andremichalowski/nuCamp_student_excercises/issues"
+    },
+    "homepage": "https://github.com/andremichalowski/nuCamp_student_excercises#readme",
+    "dependencies": {
+        "bootstrap": "^4.6.2",
+        "font-awesome": "^4.7.0",
+        "jquery": "^3.5.1",
+        "less": "^4.1.2",
+        "liveserver": "^0.1.20",
+        "popper.js": "^1.16.1"
+    },
+    "devDependencies": {
+        "copyfiles": "^2.2.0",
+        "imagemin-cli": "^5.1.0",
+        "lite-server": "^2.6.1",
+        "rimraf": "^3.0.2",
+        "usemin-cli": "^0.6.0"
+    }
+}

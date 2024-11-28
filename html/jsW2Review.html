@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>JS Review</title>
+</head>
+<body>
+    <h1>JS Review</h1>
+    <button type="button" onclick="buyTicket()">Purchase Attraction</button>
+    <script>
+        //--------------------JAVASCRIPT WEEK 1 REVIEW
+            //...
+
+        //--------------------JAVASCRIPT WEEK 2 REVIEW
+        // codepen alternative for ex's link: https://codepen.io/team/nucamp/pen/jOzpaGb?editors=0011
+        
+        //1. While loops
+
+            //a. Lec example
+                // 1-5
+                    // let i = 0 //make sure you don't re-comment this till done with do-while
+
+                    // while (i<5) {
+                    // i += 1;
+                    // console.log('WK2 Ex1a: i is', i);
+                    // }
+                
+                //do..while
+                    
+                    // while(i) {
+                    //     console.log('This wont log because 0 is falsy.');
+                    // }
+                    // console.log('while ended');
+
+                    // do {
+                    //     console.log('Get in there! "do" supersedes conditional of while only once');
+                    // } while(i);
+                    // console.log('do ended')
+
+            //b. New Example
+                    //loop works (string fibonaci mix up)
+                        // let result = '';
+                        // let i = 0;
+
+                        // do {
+                        //     i = i + 1;
+                        //     result = result + i;
+                        //     console.log('i', i);
+                        //     console.log('result', result);
+                        // } while (i < 5);
+
+                        // console.log(result);
+
+                    //loop broke but 'do' persists
+                        // let result = '';
+                        // let i = 0;
+
+                        // do {
+                        // i = i + 1;
+                        // result = result + i;
+                        // } while (i > 5); //condition change
+
+                        // console.log(result);
+
+            //c. Student Example
+            //d. Context? 
+        //2. For Loops:
+            //a. Understanding basic loop:
+                // let x = 5;
+                // for (let i =1; i<=3; i++) {
+                //     console.log('i', i);
+                //     console.log('x', x);
+                //     console.log('end of loop')
+                // }
+            //b. Basic Example with some iterating:
+                // let z = 0;
+                // let x = 5;
+                // for (let i =1; i<=3; i++) {
+                //     // console.log('i', i);
+                //     // console.log('x before', x);
+                //     x = x * i;
+                //     console.log('x after', x);
+                // //     z = z + x;
+                // //     console.log('z', z);
+                //     console.log('end of loop')
+
+                // }
+        //3. For .. Of Loops
+            //a. X2
+            // const exArr = [2, 4, 6, 8];
+            // for (const n of exArr) { //simplification of loop (similar to python)
+            //     console.log(n*2);
+            // }
+
+        //4. Break & Continue:
+            //a. Guess -1 to see if breaks. (Uncomment log statements)
+                // let fingers = Math.floor(Math.random() * 10) + 1;
+                // let guess = 0;
+                // while (guess !== fingers) {
+                //     guess = +prompt('How many fingers am I holding up?'); //converts a data type to num
+                //     if (isNaN(guess)) {
+                //         console.log('isNan');
+                //         break;
+                //     }
+                //     if ((guess < 0) || (guess > 10)) {
+                //         console.log('bigger or smaller than bounds');
+                //         continue;
+                //     }
+                //     if (guess === fingers) {
+                //         console.log('guess correct');
+                //         alert('You got it!');
+                //     } else {
+                //         console.log('guess incorrect');
+                //         alert('Try again!');
+                //     }
+                // }
+        //5. Arrays:
+            //a. Veggies
+                const veggies = ['carrot', 'squash', 'onion'];
+                // console.log(veggies);
+                // console.log('veggies.length', veggies.length);
+                // veggies[1] = 'celery'; 
+                // console.log('veggies[1] = celery', veggies);
+            //b. Methods ghost test:
+                // let wigglyFriends = ['Daryl', 'Ghostlady', 'SpectreSancho'];
+                // console.log(wigglyFriends);
+                // console.log('.includes(casper)?', wigglyFriends.includes('casper'));
+                // console.log('indexOf("Daryl")', wigglyFriends.indexOf('Daryl'));
+            //c. More methods pop/push shift/unshift:
+                // let arr = [ 1, 2, 3, 4 ];
+
+                // // How would we add to the end
+                //     let pushResult = arr.push( 5, 6, 7, 'symbolicNumber' );
+                //     console.log('pushResult', pushResult);
+                //     console.log('pushArr', arr);
+                
+                // // How would you remove from the end?
+                //     let popResult = arr.pop();
+                //     console.log('popResult', popResult);
+                //     console.log('popArr', arr);
+
+                // // How would you remove from beginning of the array?
+                //     let shiftResult = arr.shift();
+                //     console.log('shiftResult', shiftResult);
+                //     console.log('shiftArr',arr);
+                
+                // // How would you add to the beginning of the array?
+                //     let unshiftResult = arr.unshift(1, "another");
+                //     console.log('unshiftResult', unshiftResult);
+                //     console.log('unshiftArr',arr);
+
+                //     let unshiftResult2 = arr.unshift(65, 7200);
+                //     console.log('unshiftResult', unshiftResult);
+                //     console.log('unshiftArr',arr);
+
+            //d. More methods concat, sort, reverse:
+                // var arr1 = [1, 2, 3, 4];
+                // var arr2 = [5, 6, 7, 8];
+                // var arrAlph = ['b', 'x', 'a', 'z'];
+                
+                // //.concat()
+                //     const arr3 = arr1.concat(arr2);
+                //     console.log('arr3', arr3);
+                //     //[1, 2, 3, 4, 5, 6, 7, 8]
+                //     console.log('arr1, arr2', arr1, arr2); //non mutating method (original arr's intact)
+                
+                // //.reverse()
+                //     console.log('arrAlph pre reverse', arrAlph);
+                //     const arr4 = arrAlph.reverse()
+                //     console.log('arrAlph post reverse', arrAlph);
+                //     console.log('arr 4 is var of arrAlph reversed', arr4);
+
+                // //.sort()
+                //     console.log('pre sort arr 4', arr4)
+                //     const arr5 = arr4.sort()
+                //     console.log('post sort arr 4', arr4)
+                //     console.log('arr5', arr5);
+
+                // //.join()
+                //     console.log(arr5.join("-"));
+                //     console.log('arr4', arr4);
+                //     console.log('arr5', arr5);
+
+                // //.slice()
+                //     const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                //         const citrus = fruits.slice(1, 3); //Somebody likes citrus fruits!
+                //         console.log('citrus', citrus); // citrus contains ['Orange','Lemon']
+                //         console.log(fruits); // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+
+                // //.splice()
+                //     const addedFruit1 = fruits.splice(1, 2, 'Cantalope'); //Replace those citrus
+                //     console.log('addedFruit1', addedFruit1);
+                //     console.log('fruits', fruits);
+
+                //     const addedFruit2 = fruits.splice(2, 0, 'grapes');
+                //     console.log('addedFruit2', addedFruit2);
+                //     console.log('fruits', fruits);
+
+        //6. String Methods:
+            //a. for...of:
+                // for (const char of 'foobar') {
+                //     console.log(char);
+                // }
+
+            //b. .trim()
+                // const greeting = '   Hello world!   ';
+                // console.log(greeting);
+                // console.log(greeting.trim());
+            
+            //c. Some array methods do not work on strings. Strings have their own methods not shared with arrays.
+                //test
+                    // let myStr = 'dog';
+                    // myStr[0] = 'z';
+                    // console.log(myStr);
+        //7. Random Numbers
+            //a. Math.random()
+                // console.log(Math.random()); //0-0.999
+                // console.log(Math.random() * 10); //0-9.99
+            //b. Math.floor()
+                // console.log(Math.floor(9.999));
+                // console.log(Math.floor(0.999));
+                // console.log(Math.floor(3.14));
+            //c. Use together to create a random integer
+                // console.log(Math.floor(Math.random()*10)); // 0-9
+                // console.log(Math.floor(Math.random()*10)+1); // 1-10
+                // console.log(Math.floor(Math.random()*10)+2); // 2-11
+                // console.log(Math.floor(Math.random()*11)+1); // 1-11
+        //8. Functions:
+            //a. scope
+            //b. functional expressions
+            //c. arrow functions
+
+        //9. Number guessing game review:
+            //(see num guessing game doc)
+        
+            
+                
+
+
+
+                
+    </script>
+</body>
+</html>
